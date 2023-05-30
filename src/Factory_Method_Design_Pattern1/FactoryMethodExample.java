@@ -121,7 +121,6 @@ class Game {
     }
 }
 
-// Main class
 public class FactoryMethodExample {
     public static void main(String[] args) {
         Game game = new Game();
