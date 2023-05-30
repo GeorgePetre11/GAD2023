@@ -2,7 +2,6 @@ package Factory_Method_Design_Pattern1;
 
 import java.util.Scanner;
 
-// Abstract product class
 abstract class GameCharacter {
     protected String name;
     protected int health;
@@ -35,7 +34,6 @@ abstract class GameCharacter {
     }
 }
 
-// Concrete product classes
 class Knight extends GameCharacter {
     public Knight(String name, int health, int attackPower) {
         super(name, health, attackPower);
@@ -68,12 +66,10 @@ class Mage extends GameCharacter {
     }
 }
 
-// Abstract factory class
 abstract class GameCharacterFactory {
     public abstract GameCharacter createCharacter();
 }
 
-// Concrete factory classes
 class KnightFactory extends GameCharacterFactory {
     @Override
     public GameCharacter createCharacter() {
@@ -88,7 +84,6 @@ class MageFactory extends GameCharacterFactory {
     }
 }
 
-// Game class
 class Game {
     private GameCharacterFactory characterFactory;
     private GameCharacter playerCharacter;
